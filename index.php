@@ -15,7 +15,7 @@
 		<br>
 
 		<label for="id_user">Votre Id en nombre :</label>
-		<input type="text" name="id_user" value=117>
+		<input type="text" name="id_user" value=1>
 		<br>
 
 		<label for="prixdepart">Prix de départ :</label>
@@ -23,7 +23,7 @@
 		<br>
 
 		<label for="enddate">Date de fin de l'enchère :</label>
-		<input type="text" name="enddate" value="01/01/2023">
+		<input type="date" name="enddate">
 		<br>
 
 		<label for="model">Model du véhicule :</label>
