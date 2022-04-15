@@ -7,9 +7,6 @@
     <title>Document</title>
 </head>
 
-
-
-
 <h1>Bienvenue sur votre page d'inscription</h1>
 
 <form action="inscriptionbdd.php" method="post">
