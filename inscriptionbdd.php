@@ -11,7 +11,7 @@ $query = $dbh->prepare("INSERT INTO Users (firstname, lastname, email, pw, pseud
 $result = $query->execute([$Nom, $Prenom, $Mail, $Motdepasse, $Pseudo]);
 
 if ($result === true) {
-    echo "Vroum ! Vroum ! Vroum ! Bienvenue sur votre site d'encheres !! ";
+    echo "Vroum ! Vroum ! Vroum ! Ton inscription a réussis ! <br> Bienvenue sur votre site d'encheres !! <br> Cliquez <a href='annonce.php'>ici</a> , pour trouver toutes nos annonces ! ";
 } else {
-    echo "Not Success";
+    echo "BOUM, ton inscription n'as pas fonctionner... Recommence !";
 }
