@@ -4,12 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Déposer votre annonces</title>
+	<link rel="stylesheet" href="annonce.css">
 </head>
 
 <body>
-
-	<form action="indexdbh.php" method="POST">
-
+      
+	<form action="indexdbh.php" method="POST" id="annonce">
+	     <h1>***formulaire d'Annonce***</h1>
 		<label for="pseudo">Pseudo :</label>
 		<input type="text" name="pseudo" value="Kata">
 		<br>
