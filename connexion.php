@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+require __DIR__ . "/dbh.php";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,40 +37,24 @@ session_start();
 	</div>
 
 	<?php
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$email =  filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+		$password = $_POST['password'];
 
-	$email =  htmlspecialchars($_POST['email']);
-
-	$password = htmlspecialchars($_POST['password']);
-
-
-	$dbh = new PDO("mysql:dbname=enchere;host=localhost", "root", "");
-	$send = $dbh->prepare('SELECT * FROM Users WHERE email = ?');
-	$send->execute([$email]);
-	$response = $send->fetchAll(PDO::FETCH_ASSOC);
-	if ($response == true) {
-		foreach ($response as $value) {
+		$send = $dbh->prepare('SELECT * FROM Users WHERE email = ?');
+		$send->execute([$email]);
+		$value = $send->fetch(PDO::FETCH_ASSOC);
+		if ($value != false) {
 			if (password_verify($password, $value['pw'])) {
 				$_SESSION['user'] = $value['email'];
 				header("Location:test.php");
 			} else {
 				echo "Mot de passe Incorrect";
 			}
+		} else {
+			echo "erreur1";
 		}
-	} else {
-		echo "erreur1";
 	}
-	//  Exécuter la requête sur la base de données
-
-
-
-
-	/* session_start();
-		if (!isset($_SESSION['email'])) {
-			$user = $_SESSION['email'];
-			// afficher un message
-			echo "Bonjour $email, vous êtes connecté";
-		}; */
-	/* 	} */
 	?>
 	</form>
 	</div>
