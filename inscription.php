@@ -30,4 +30,4 @@
 
     <input type="submit" value="S'INSCRIRE">
 
-    <form action="inscription" method="POST"></form>
+</form>
