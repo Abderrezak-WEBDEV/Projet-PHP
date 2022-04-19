@@ -41,7 +41,7 @@ session_start();
 	$password = htmlspecialchars($_POST['password']);
 
 
-	$dbh = new PDO("mysql:dbname=enchere;host=localhost", "root", "root");
+	$dbh = new PDO("mysql:dbname=enchere;host=localhost", "root", "");
 	$send = $dbh->prepare('SELECT * FROM Users WHERE email = ?');
 	$send->execute([$email]);
 	$response = $send->fetchAll(PDO::FETCH_ASSOC);
