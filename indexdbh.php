@@ -1,4 +1,4 @@
-<?php $dbh = new PDO("mysql:dbname=enchere;host=127.0.0.1", "root", ""); ?>
+<?php $dbh = new PDO("mysql:dbname=enchere;host=localhost", "root", "root"); ?>
 
 
 
@@ -35,5 +35,5 @@
 
 <?php
 $result = $dbh->prepare("INSERT INTO annonce (id_user,prixdepart,enddate,model,marque,yearmodel,power,description,pseudo,totalenchere) VALUES(?,?,?,?,?,?,?,?,?,?)");
-$result->execute([$_POST["id_user"], $_POST["prixdepart"], $_POST["enddate"], $_POST["model"], $_POST["marque"], $_POST["yearmodel"], $_POST["power"], $_POST["description"], $_POST["pseudo"], $_POST["totalenchere"]])
+$result->execute([$_POST["id_user"], $_POST["prixdepart"], $_POST["enddate"], $_POST["model"], $_POST["marque"], $_POST["yearmodel"], $_POST["power"], $_POST["description"], $_POST["pseudo"], $_POST["totalenchere"]]);
 ?>
