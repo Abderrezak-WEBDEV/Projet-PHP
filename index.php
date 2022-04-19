@@ -1,3 +1,7 @@
+<?php
+include_once __DIR__."/header.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,7 +14,7 @@
 <body>
       
 	<form action="indexdbh.php" method="POST" id="annonce">
-	     <h1>***formulaire d'Annonce***</h1>
+	     <h1>*** Formulaire d'annonce ***</h1>
 		<label for="pseudo">Pseudo :</label>
 		<input type="text" name="pseudo" value="Kata">
 		<br>
@@ -50,20 +54,11 @@
 		<label for="totalenchere">Enchere model :</label>
 		<input type="number" name="totalenchere" value="10">
 		<br>
-
-
 		<button type="submit">Poster mon annonce</button>
 
 		<br><br>
 	</form>
 
-	<form action="inscription.php">
-		<button type="submit">S'inscrire</button>
-	</form>
-
-	<form action="connexion.php">
-		<button type="submit">Page de connexion</button>
-	</form>
 
 
 </body>
