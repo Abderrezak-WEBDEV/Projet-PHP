@@ -13,7 +13,7 @@ session_start();
 <body>
 	<div class="connexion">
 		<h1>Se connecter</h1>
-		<form action="connexion.php" method="POST">
+		<form action="annonce.php" method="POST">
 			<br />
 			<label for="email">E-mail</label>
 			<input type="text" name="email">
@@ -21,14 +21,11 @@ session_start();
 			<label for="password">Mot de Passe</label>
 			<input type="password" name="password">
 			<br />
-			<input type="submit" value="connexion" />
-
+			<button type="submit">Connexion</button>
 		</form>
 
 		<form action="inscription.php" method="POST">
-
 			<button type="submit">S'inscrire</button>
-
 		</form>
 
 		<form action="annonce.php" method="POST">

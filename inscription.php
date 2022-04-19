@@ -1,14 +1,9 @@
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <title>Document</title>
+    <title>Inscription</title>
 </head>
-
-
-
 
 <h1>Bienvenue sur votre page d'inscription</h1>
 
@@ -29,5 +24,6 @@
     <input type="text" placeholder="Pseudo" name="Pseudo">
 
     <input type="submit" value="S'INSCRIRE">
-
 </form>
+
+<p>Déjà inscrit ? Par <a href="connexion.php">ici</a></p>

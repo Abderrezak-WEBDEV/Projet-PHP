@@ -7,7 +7,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Votre poste</title>
 </head>
 
 <body>
@@ -24,6 +24,10 @@
 	<p>Description du model : <?php echo htmlspecialchars($_POST["description"]); ?> <br> </p>
 	<p>Enchere du model : <?php echo htmlspecialchars($_POST["totalenchere"]); ?> <br> </p>
 </body>
+
+<form action="annonce.php">
+	<button type="submit">Toute nos annonces</button>
+</form>
 
 </html>
 
