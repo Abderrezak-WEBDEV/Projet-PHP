@@ -1,8 +1,9 @@
-<?php include __DIR__ . "/dbh.php"; ?>
 <?php
+include __DIR__ . "/dbh.php"; 
 include_once __DIR__."/header.php"; 
+include_once __DIR__."/detail_enchere.php";
 ?>
-<?php $dbh = new PDO("mysql:dbname=enchere;host=localhost", "root", ""); ?>
+<?php $dbh = new PDO("mysql:dbname=carenchere;host=127.0.0.1", "root", ""); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +16,7 @@ include_once __DIR__."/header.php";
 <body>
     <div  id = "annonces"> 
      <h1>Nos annonces</h1>
-    <p>Si vous souhaitez poster une <a href="index.php">Annonce </a></p>
+    <p>Si vous souhaitez poster une <a href="index.php">Annonce</a></p>
     <?php
     $query = $dbh->query("SELECT * FROM annonce");
     $vehicule = $query->fetchAll(PDO::FETCH_ASSOC); ?>
@@ -32,10 +33,19 @@ include_once __DIR__."/header.php";
         <p>Description : <?= $vehicule["description"] ?></p>
         <p>Total enchére du véhicule : <?= $vehicule["totalenchere"] ?></p><br>
 
+		<?php if (new DateTime($vehicule["enddate"]) > new DateTime()) { ?>
+		<form action="annonce.php" method="POST">
+			<input type="hidden" name="id_annonce" value="<?= $vehicule["id"]; ?>" placeholder="-">
+			<input type="number" name="price"/>
+			<input type="submit" value="Valider">
+		</form>
+		<?php } else { ?>
+			<p>Enchères terminées</p>
+		<?php } ?>
         <hr>
-    <?php }
-    ?>
-</div>
+    <?php } ?>
+    
+	</div>
 <style>
 
 h1 {
@@ -60,7 +70,12 @@ button {
 input {
 	background-color:rgb(0, 255, 136);
 }
-
+#enchere {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ margin-bottom: 10px;
+}
 
 </style>
 </body>

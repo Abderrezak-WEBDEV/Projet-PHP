@@ -25,7 +25,6 @@
     <style>
     .deconnexion {
       margin-left:  300px;
-
     }
 
     </style>
