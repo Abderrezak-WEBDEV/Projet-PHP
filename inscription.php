@@ -6,13 +6,14 @@ include_once __DIR__."/header.php";
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="annonce.css" />
 
+    
     <title>Inscription</title>
 </head>
 
 
 <form action="inscriptionbdd.php" method="post" id="annonce">
     
-        <h1> *** Inscription ***</h1>
+        <h1> Inscription </h1>
     </br>
     <label for="Prenom"></label>
     <input type="text" placeholder="Nom" name="Prenom">
@@ -33,3 +34,24 @@ include_once __DIR__."/header.php";
     </br>
     <p>Déjà inscrit ? Par <a href="connexion.php">ici</a></p>
 </form>
+<style>
+h1 {
+  color: rgb(0, 255, 136);
+}
+#annonce {
+   background-color: white;
+   box-shadow: 10px 5px 5px rgb(0, 255, 136);
+}
+button {
+	width: 80%;
+	margin-left: 10%;
+	height: 30px;
+	border-radius: 5px;
+}
+input {
+	background-color:rgb(0, 255, 136);
+}
+</style>
+
+</body>
+</html>
