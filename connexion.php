@@ -1,14 +1,15 @@
 <?php
 
-include_once __DIR__."/header.php"; 
+include_once __DIR__ . "/header.php";
 
 session_start();
+
+
 
 require __DIR__ . "/dbh.php";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Connexion</title>
@@ -18,19 +19,19 @@ require __DIR__ . "/dbh.php";
 <body>
 	<div class="connexion">
 		<form action="annonce.php" method="POST" id="annonce">
-			<h1>*** Se connecter ***</h1>
+			<h1> Se connecter </h1>
 			<br />
-			<label for="email">E-mail</label>
-			<input type="text" name="email">
+			
+			<input type="text" name="email" placeholder="Email">
 			<br />
-			<label for="password">Mot de Passe</label>
-			<input type="password" name="password">
+			
+			<input type="password" name="password"  placeholder="Mot de passe">
 			<br />
 			<button type="submit">Connexion</button>
 
 			<p><a href="inscription.php">S'inscrire</a></p>
 		</form>
-		
+
 	</div>
 
 	<?php
@@ -44,6 +45,7 @@ require __DIR__ . "/dbh.php";
 		if ($value != false) {
 			if (password_verify($password, $value['pw'])) {
 				$_SESSION['user'] = $value['email'];
+				$_SESSION['user_id'] = $value['id'];
 				header("Location:test.php");
 			} else {
 				echo "Mot de passe Incorrect";
@@ -55,8 +57,24 @@ require __DIR__ . "/dbh.php";
 	?>
 	</form>
 	</div>
-
+<style>
+h1 {
+  color: rgb(0, 255, 136);
+}
+#annonce {
+   background-color: white;
+   box-shadow: 10px 5px 5px rgb(0, 255, 136);
+}
+button {
+	width: 80%;
+	margin-left: 10%;
+	height: 30px;
+	border-radius: 5px;
+}
+input {
+	background-color:rgb(0, 255, 136);
+}
+</style>
 
 </body>
-
 </html>

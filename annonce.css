@@ -2,11 +2,7 @@ body {
   margin: 0px;
   background-image: url("judici.jpg");
 }
-input {
-  border: none;
-  height: 20px;
-  border: 1px solid black;
-}
+
 button {
   border: none;
   height: 20px;
@@ -47,24 +43,21 @@ img {
   margin-left: 400px;
   border: 2px solid rgb(0, 255, 136);
   border-radius: 5px;
+  background-color: azure;
 }
 input {
   border: none;
-  background-color: aquamarine;
+
   width: 80%;
   height: 30px;
   margin-left: 10%;
   border-radius: 5px;
-  color: aqua;
+  color: rgb(0, 34, 255);
 }
 textarea {
   border: none;
-  background-color: aquamarine;
   width: 80%;
   height: 30px;
   margin-left: 10%;
   border-radius: 5px;
-}
-h1 {
-  color: blue;
 }
