@@ -1,4 +1,7 @@
 <?php
+
+include_once __DIR__."/header.php"; 
+
 session_start();
 
 require __DIR__ . "/dbh.php";
@@ -9,13 +12,13 @@ require __DIR__ . "/dbh.php";
 <head>
 	<meta charset="UTF-8">
 	<title>Connexion</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="annonce.css">
 </head>
 
 <body>
 	<div class="connexion">
-		<h1>Se connecter</h1>
-		<form action="annonce.php" method="POST">
+		<form action="annonce.php" method="POST" id="annonce">
+			<h1>*** Se connecter ***</h1>
 			<br />
 			<label for="email">E-mail</label>
 			<input type="text" name="email">
@@ -24,16 +27,10 @@ require __DIR__ . "/dbh.php";
 			<input type="password" name="password">
 			<br />
 			<button type="submit">Connexion</button>
-		</form>
 
-		<form action="inscription.php" method="POST">
-			<button type="submit">S'inscrire</button>
+			<p><a href="inscription.php">S'inscrire</a></p>
 		</form>
-
-		<form action="annonce.php" method="POST">
-			<button type="submit">Nos Annonces</button>
-		</form>
-		<button type="submit">Se déconnecter</button>
+		
 	</div>
 
 	<?php

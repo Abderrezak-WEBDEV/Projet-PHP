@@ -29,12 +29,14 @@
 	<p>Description : <?= $vehicule["description"] ?></p>
 	<p>Total enchére du véhicule : <?= $vehicule["totalenchere"] ?></p><br>
 
+	<<<<<<< HEAD <a href="detail_annonce.php?annonce= <?= $annonce["id"]; ?> "> <button> En savoir plus </button> </a>
 
-	<a href="detail_annonce.php?annonce= <?= $annonce["id"]; ?> "> <button> En savoir plus </button> </a>
-
-	<hr>
-	<?php }
+		<hr>
+		<?php }
 	?>
+
+		<br>
+
 
 
 </body>
