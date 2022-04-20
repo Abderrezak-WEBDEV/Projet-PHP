@@ -23,15 +23,16 @@ session_start();
 	<p>Puissance du model : <?php echo htmlspecialchars($_POST["power"]); ?> <br> </p>
 	<p>Description du model : <?php echo htmlspecialchars($_POST["description"]); ?> <br> </p>
 	<p>Enchere du model : <?php echo htmlspecialchars($_POST["totalenchere"]); ?> <br> </p>
-</body>
 
-<form action="annonce.php">
-	<button type="submit">Validez</button>
-</form>
+
+	<form action="annonce.php">
+		<button type="submit">Validez</button>
+	</form>
+
+</body>
 
 </html>
 <?php
-
 $result = $dbh->prepare("INSERT INTO annonce (id_user,prixdepart,enddate,model,marque,yearmodel,power,description,pseudo,totalenchere) VALUES(?,?,?,?,?,?,?,?,?,?)");
 $result->execute([$_POST["id_user"], $_POST["prixdepart"], $_POST["enddate"], $_POST["model"], $_POST["marque"], $_POST["yearmodel"], $_POST["power"], $_POST["description"], $_POST["pseudo"], $_POST["totalenchere"]]);
 ?>

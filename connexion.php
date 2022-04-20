@@ -2,9 +2,7 @@
 
 include_once __DIR__ . "/header.php";
 
-session_start();
-
-
+// session_start();
 
 require __DIR__ . "/dbh.php";
 ?>
@@ -18,7 +16,7 @@ require __DIR__ . "/dbh.php";
 
 <body>
 	<div class="connexion">
-		<form action="annonce.php" method="POST" id="annonce">
+		<form action="connexion.php" method="POST" id="annonce">
 			<h1> Se connecter </h1>
 			<br />
 			
@@ -44,9 +42,10 @@ require __DIR__ . "/dbh.php";
 		$value = $send->fetch(PDO::FETCH_ASSOC);
 		if ($value != false) {
 			if (password_verify($password, $value['pw'])) {
+				session_start();
 				$_SESSION['user'] = $value['email'];
-				$_SESSION['user_id'] = $value['id'];
-				header("Location:test.php");
+				$_SESSION['id_user'] = $value['id'];
+				header("Location: annonce.php");
 			} else {
 				echo "Mot de passe Incorrect";
 			}

@@ -25,6 +25,8 @@ include_once __DIR__ . "/header.php";
 		<input type="number" name="prixdepart" placeholder="Prix de départ">
 		<br>
 
+		<input type="number" name="id_user"  placeholder="id_user">
+         <br>
 
 		<input type="date" name="enddate" placeholder="Date de fin de l'enchère">
 		<br>

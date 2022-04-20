@@ -5,11 +5,8 @@ include_once __DIR__ . "/header.php";
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="annonce.css" />
-
-
 	<title>Inscription</title>
 </head>
-
 
 <form action="inscriptionbdd.php" method="post" id="annonce">
 
@@ -30,7 +27,7 @@ include_once __DIR__ . "/header.php";
 	<label for="Pseudo"></label>
 	<input type="text" placeholder="Pseudo" name="Pseudo">
 	</br>
-	<input type="submit" value="S'INSCRIRE">
+	<button type="submit" value="S'INSCRIRE">S'inscrire</button>
 	</br>
 	<p>Déjà inscrit ? Par <a href="connexion.php">ici</a></p>
 </form>
