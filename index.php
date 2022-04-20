@@ -18,7 +18,8 @@ include_once __DIR__."/header.php";
 	
 		<input type="text" name="pseudo" placeholder="Pseudo" >
 		<br>
-
+		<input type="file" name="pseudo" placeholder="telecharger des images" >
+		<br>
 		<input type="number" name="id_user"  placeholder="id_user">
          <br>
 
