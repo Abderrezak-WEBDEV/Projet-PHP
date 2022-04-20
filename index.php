@@ -12,7 +12,7 @@ include_once __DIR__."/header.php";
 </head>
 
 <body>
-      
+
 	<form action="indexdbh.php" method="POST" id="annonce">
 	     <h1> Formulaire d'annonce </h1>
 	

@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__."/header.php"; 
+include_once __DIR__ . "/header.php";
 ?>
 
 <head>
@@ -33,6 +33,7 @@ include_once __DIR__."/header.php";
     <input type="submit" value="S'INSCRIRE">
     </br>
     <p>Déjà inscrit ? Par <a href="connexion.php">ici</a></p>
+<<<<<<< HEAD
 </form>
 <style>
 h1 {
@@ -55,3 +56,6 @@ input {
 
 </body>
 </html>
+=======
+</form>
+>>>>>>> 5c06c85738f10447d160218be477b38f5037a527
