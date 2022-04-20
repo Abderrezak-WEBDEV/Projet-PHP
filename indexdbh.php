@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<p>Merci pour ton annonce <br> <br></p>
+	<p>Merci pour ton annonce, veuillez verifier les informations.<br> <br></p>
 
 	<p>Pseudo : <?php echo htmlspecialchars($_POST["pseudo"]); ?><br> </p>
 	<p>Numéro de vendeur : <?php echo htmlspecialchars($_POST["id_user"]); ?><br> </p>
@@ -26,7 +26,7 @@
 </body>
 
 <form action="annonce.php">
-	<button type="submit">Toute nos annonces</button>
+	<button type="submit">Validez</button>
 </form>
 
 </html>

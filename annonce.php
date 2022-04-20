@@ -29,13 +29,22 @@
 	<p>Description : <?= $vehicule["description"] ?></p>
 	<p>Total enchére du véhicule : <?= $vehicule["totalenchere"] ?></p><br>
 
-	<<<<<<< HEAD <a href="detail_annonce.php?annonce= <?= $annonce["id"]; ?> "> <button> En savoir plus </button> </a>
+	<?php if (new DateTime($vehicule["enddate"]) > new DateTime()) { ?>
+	<form action="" method="POST">
+		<input type="number" name="price" placeholder="-">
+		<input type="hidden" name="id_annonce" value="<?= $vehicule["id"] ?>" />
+		<input type="submit" value="Valider">
+	</form>
+	<? } else { ?>
+	<p>Enchère terminée</p>
+	<?php } ?>
 
-		<hr>
-		<?php }
-	?>
 
-		<br>
+
+	<hr>
+	<?php } ?>
+
+	<br>
 
 
 
