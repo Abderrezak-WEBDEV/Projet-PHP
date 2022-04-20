@@ -1,9 +1,9 @@
 <?php
-include __DIR__ . "/dbh.php"; 
-include_once __DIR__."/header.php"; 
-include_once __DIR__."/detail_enchere.php";
+include __DIR__ . "/dbh.php";
+include_once __DIR__ . "/header.php";
+include_once __DIR__ . "/detail_enchere.php";
 ?>
-<?php $dbh = new PDO("mysql:dbname=carenchere;host=127.0.0.1", "root", ""); ?>
+<?php $dbh = new PDO("mysql:dbname=enchere;host=127.0.0.1", "root", ""); ?>
 
 <!DOCTYPE html>
 <html lang="fr">

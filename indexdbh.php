@@ -1,6 +1,6 @@
-<?php $dbh = new PDO("mysql:dbname=carenchere;host=127.0.0.1", "root", ""); ?>
-<?php 
-// session_start();
+<?php $dbh = new PDO("mysql:dbname=enchere;host=127.0.0.1", "root", ""); ?>
+<?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,7 +14,7 @@
 	<p>Merci pour ton annonce, veuillez verifier les informations.<br> <br></p>
 
 	<p>Pseudo : <?php echo htmlspecialchars($_POST["pseudo"]); ?><br> </p>
-	<p>Id vendeur : <?php echo htmlspecialchars($_POST["id_user"]); ?><br> </p>
+	<p>Id Vendeur : <?php echo htmlspecialchars($_POST["id_user"]); ?><br> </p>
 	<p>Prix de depart :<?php echo $_POST["prixdepart"]; ?> <br></p>
 	<p>Date de fin d'enchère : <?php echo htmlspecialchars($_POST["enddate"]); ?><br></p>
 	<p>Model de véhicule : <?php echo htmlspecialchars($_POST["model"]); ?> <br></p>
@@ -25,11 +25,12 @@
 	<p>Enchere du model : <?php echo htmlspecialchars($_POST["totalenchere"]); ?> <br> </p>
 
 
-<form action="annonce.php">
-	<button type="submit">Validez</button>
-</form>
+	<form action="annonce.php">
+		<button type="submit">Validez</button>
+	</form>
 
 </body>
+
 </html>
 <?php
 $result = $dbh->prepare("INSERT INTO annonce (id_user,prixdepart,enddate,model,marque,yearmodel,power,description,pseudo,totalenchere) VALUES(?,?,?,?,?,?,?,?,?,?)");
