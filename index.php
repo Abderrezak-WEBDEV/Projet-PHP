@@ -8,9 +8,9 @@
 </head>
 
 <body>
-      
+
 	<form action="indexdbh.php" method="POST" id="annonce">
-	     <h1>***formulaire d'Annonce***</h1>
+		<h1>*** Formulaire d'annonce ***</h1>
 		<label for="pseudo">Pseudo :</label>
 		<input type="text" name="pseudo" value="Kata">
 		<br>
