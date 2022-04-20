@@ -1,8 +1,10 @@
 <?php
 
-include_once __DIR__."/header.php"; 
+include_once __DIR__ . "/header.php";
 
 session_start();
+
+
 
 require __DIR__ . "/dbh.php";
 ?>
@@ -30,7 +32,7 @@ require __DIR__ . "/dbh.php";
 
 			<p><a href="inscription.php">S'inscrire</a></p>
 		</form>
-		
+
 	</div>
 
 	<?php

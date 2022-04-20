@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__."/header.php"; 
+include_once __DIR__ . "/header.php";
 ?>
 
 <head>
@@ -11,8 +11,8 @@ include_once __DIR__."/header.php";
 
 
 <form action="inscriptionbdd.php" method="post" id="annonce">
-    
-        <h1> *** Inscription ***</h1>
+
+    <h1> *** Inscription ***</h1>
     </br>
     <label for="Prenom"></label>
     <input type="text" placeholder="Nom" name="Prenom">
